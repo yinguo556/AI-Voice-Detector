@@ -1,0 +1,20 @@
+nohup: ignoring input
+device=cuda, data=/root/autodl-tmp/dataset, model=/root/autodl-tmp/wavlm-model
+train 40000, seen 2000, unseen 1851
+Loading weights:   0%|                                                                                                                                       | 0/248 [00:00<?, ?it/s]Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 248/248 [00:00<00:00, 19928.49it/s]
+[epoch 1] loss=0.2409 seen EER=0.35% acc=99.60% (315s)
+[epoch 2] loss=0.2129 seen EER=0.15% acc=99.85% (315s)
+[epoch 3] 解冻 WavLM 主干, lr_backbone=0.0001
+[epoch 3] loss=0.2171 seen EER=0.10% acc=99.55% (370s)
+[epoch 4] loss=0.2020 seen EER=0.00% acc=100.00% (370s)
+[epoch 5] loss=0.2016 seen EER=0.00% acc=100.00% (371s)
+[epoch 6] loss=0.2013 seen EER=0.00% acc=99.95% (370s)
+[epoch 7] loss=0.2010 seen EER=0.00% acc=100.00% (370s)
+[epoch 8] loss=0.2005 seen EER=0.00% acc=100.00% (370s)
+[epoch 9] loss=0.2004 seen EER=0.00% acc=100.00% (370s)
+[epoch 10] loss=0.2004 seen EER=0.00% acc=99.95% (371s)
+
+===== 最终结果 (best epoch 权重) =====
+seen   : EER=0.00% acc=100.00% AUC=1.0000
+unseen : EER=7.29% acc=79.52% AUC=0.9724
+已保存: /root/autodl-tmp/outputs/best_model.pt, metrics.json, test_scores.npz
