@@ -119,7 +119,6 @@ set PYTHONUTF8=1 && python export_onnx.py
 |---|---|
 | 数据准备/部署 | Windows, Python 3.12, numpy/soundfile/scipy/onnxruntime/fastapi |
 | 训练 | AutoDL RTX 4080 SUPER, PyTorch 2.8+cu128, transformers 5.24 |
-| 已知坑 | torch 2.15 需新版 VC++ 运行库；ONNX 导出需 onnxscript 包；Windows GBK 控制台跑导出需 `PYTHONUTF8=1` |
 
 ## 局限与展望
 
@@ -127,7 +126,3 @@ set PYTHONUTF8=1 && python export_onnx.py
 - unseen 中基础档音色检出率偏低，可通过增加基础音库音色数量（买额度合成）改善；
 - 未测试对抗场景：重压缩、加噪、变调后的鲁棒性；
 - 当前只判断整段真伪，未做伪造片段定位（partial fake）。
-
-## 费用记录
-
-百度 TTS 合成约 2.2 万次调用（臻品免费额度 1 万次 + 基础约 24 元），AutoDL 训练约 1 卡时（个位数元）。总成本 30 元以内。
